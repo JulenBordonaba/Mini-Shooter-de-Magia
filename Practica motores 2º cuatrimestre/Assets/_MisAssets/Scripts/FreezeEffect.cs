@@ -5,7 +5,7 @@ using UnityEngine;
 public class FreezeEffect : MonoBehaviour
 {
     public string freezeTag = "Freeze";
-    
+
 
     public Animator animator;
 
@@ -15,8 +15,8 @@ public class FreezeEffect : MonoBehaviour
     public List<SkinnedMeshRenderer> skinnedRenderers = new List<SkinnedMeshRenderer>();
     public Material freezeMaterial;
 
-    public PlayerManager playerManager;
 
+    public bool freezed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +42,7 @@ public class FreezeEffect : MonoBehaviour
 
     void Freeze()
     {
-        playerManager.freezed = true;
+        freezed = true;
         animator.enabled = false;
         foreach (MeshRenderer renderer in renderers)
         {
@@ -66,7 +66,7 @@ public class FreezeEffect : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
 
-        playerManager.freezed = false;
+        freezed = false;
         animator.enabled = true;
         foreach (MeshRenderer renderer in renderers)
         {

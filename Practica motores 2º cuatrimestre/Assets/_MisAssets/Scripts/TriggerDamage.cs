@@ -7,10 +7,12 @@ public class TriggerDamage : MonoBehaviour
 
     public float damage = 10;
 
+    public string targetTag = "Enemy";
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag(targetTag))
         {
             other.GetComponentInParent<Enemy>()?.TakeDamage(damage);
         }

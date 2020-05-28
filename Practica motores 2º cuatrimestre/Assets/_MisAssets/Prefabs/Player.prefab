@@ -1285,6 +1285,7 @@ GameObject:
   - component: {fileID: 1886250042}
   - component: {fileID: 1309226518883012139}
   - component: {fileID: 1886250043}
+  - component: {fileID: 1886250038}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1388,14 +1389,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aecfe364c5e0b284aa77edea0cc20793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeTag: EnemyFreeze
-  freezed: 0
+  freezeTag: FreezeEnemy
   animator: {fileID: 3918301881092792556}
   iceEffectPrefab: {fileID: 1593489397608608, guid: cfcaf78d78d55f548ba097909b77c92f,
     type: 3}
   renderers: []
   skinnedRenderers: []
   freezeMaterial: {fileID: 2100000, guid: d0fd8e33bd284f14694335bc5f266263, type: 2}
+  freezed: 0
 --- !u!114 &1309226518883012139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1428,6 +1429,20 @@ MonoBehaviour:
     type: 3}
   effectGuide: {fileID: 4963956254023016699}
   myCamera: {fileID: 0}
+--- !u!114 &1886250038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3918301881102144368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e537c53df8eaee46bcb1ec23e55a6cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boosted: 0
+  freezeEffect: {fileID: 1886250042}
 --- !u!1 &3918301881102144372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,16 +1894,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3918301881101782864}
     m_Modifications:
-    - target: {fileID: 7815640272331041750, guid: 98ce34b690d03364e89387295564b6eb,
-        type: 3}
-      propertyPath: m_Name
-      value: IceEffectGuide
-      objectReference: {fileID: 0}
-    - target: {fileID: 7815640272331041750, guid: 98ce34b690d03364e89387295564b6eb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3781128842723169207, guid: 98ce34b690d03364e89387295564b6eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1944,6 +1949,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7815640272331041750, guid: 98ce34b690d03364e89387295564b6eb,
+        type: 3}
+      propertyPath: m_Name
+      value: IceEffectGuide
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815640272331041750, guid: 98ce34b690d03364e89387295564b6eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98ce34b690d03364e89387295564b6eb, type: 3}
 --- !u!1 &4963956254023016699 stripped
@@ -1965,11 +1980,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2084686064}
     m_Modifications:
-    - target: {fileID: 8812314685288134058, guid: c78e5fbfd113d86409d32a8cdc64c7e1,
-        type: 3}
-      propertyPath: m_Name
-      value: Particles_Gun_MuzzleFlash_Prefab
-      objectReference: {fileID: 0}
     - target: {fileID: 1373925930965568919, guid: c78e5fbfd113d86409d32a8cdc64c7e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2024,6 +2034,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812314685288134058, guid: c78e5fbfd113d86409d32a8cdc64c7e1,
+        type: 3}
+      propertyPath: m_Name
+      value: Particles_Gun_MuzzleFlash_Prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c78e5fbfd113d86409d32a8cdc64c7e1, type: 3}

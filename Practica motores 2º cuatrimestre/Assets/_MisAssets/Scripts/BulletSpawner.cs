@@ -29,7 +29,7 @@ public class BulletSpawner : MonoBehaviour
     {
         if(playerManager)
         {
-            if (playerManager.freezed) return;
+            if (playerManager.Freezed) return;
         }
         if(Input.GetButton(fireInput) && canShot)
         {

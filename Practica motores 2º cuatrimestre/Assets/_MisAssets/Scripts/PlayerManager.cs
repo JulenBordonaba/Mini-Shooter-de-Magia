@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public bool freezed = false;
     public bool boosted = false;
+    public FreezeEffect freezeEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -33,5 +33,10 @@ public class PlayerManager : MonoBehaviour
         {
             boosted = false;
         }
+    }
+
+    public bool Freezed
+    {
+        get { return freezeEffect.freezed; }
     }
 }

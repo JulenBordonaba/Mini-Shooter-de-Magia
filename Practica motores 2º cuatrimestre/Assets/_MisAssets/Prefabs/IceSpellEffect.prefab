@@ -4764,7 +4764,7 @@ GameObject:
   - component: {fileID: 7606974641677380246}
   - component: {fileID: 7606974641677380245}
   - component: {fileID: 7606974641677380244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IceSpellEffect
   m_TagString: Freeze
   m_Icon: {fileID: 0}
@@ -9548,7 +9548,7 @@ GameObject:
   - component: {fileID: 7606974642550334652}
   - component: {fileID: 7606974642550334651}
   - component: {fileID: 7606974642550334650}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EffectArea
   m_TagString: Freeze
   m_Icon: {fileID: 0}

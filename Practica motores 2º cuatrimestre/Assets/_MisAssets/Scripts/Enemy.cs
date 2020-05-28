@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(FreezeEffect))]
 public class Enemy : MonoBehaviour
 {
     public float maxhealth = 300;
 
 
-    private float currentHealth;
+    protected float currentHealth;
+
+    public FreezeEffect freezeEffect;
 
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
+        freezeEffect = GetComponent<FreezeEffect>();
         currentHealth = maxhealth;
     }
 

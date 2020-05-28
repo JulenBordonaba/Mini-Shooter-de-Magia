@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerManager.freezed) return;
+        if (playerManager.Freezed) return;
         float h = Input.GetAxis("Horizontal"); //izquierda/derecha
         float v = Input.GetAxis("Vertical"); //alante/atrás
 
