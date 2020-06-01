@@ -4764,9 +4764,10 @@ GameObject:
   - component: {fileID: 7606974641677380246}
   - component: {fileID: 7606974641677380245}
   - component: {fileID: 7606974641677380244}
+  - component: {fileID: 7725123190808689114}
   m_Layer: 9
   m_Name: IceSpellEffect
-  m_TagString: Freeze
+  m_TagString: PlayerEffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9535,6 +9536,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &7725123190808689114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606974641677380243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e4c71c91827134b9adea3c0915bac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeTime: 6
 --- !u!1 &7606974642550334648
 GameObject:
   m_ObjectHideFlags: 0
@@ -9548,9 +9562,10 @@ GameObject:
   - component: {fileID: 7606974642550334652}
   - component: {fileID: 7606974642550334651}
   - component: {fileID: 7606974642550334650}
+  - component: {fileID: 1529518436469247995}
   m_Layer: 9
   m_Name: EffectArea
-  m_TagString: Freeze
+  m_TagString: PlayerEffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9647,3 +9662,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1529518436469247995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606974642550334648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e4c71c91827134b9adea3c0915bac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeTime: 6

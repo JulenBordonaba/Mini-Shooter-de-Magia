@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4664351298222981536}
-  - component: {fileID: 2660733858169267850}
-  - component: {fileID: 3847611557146967844}
-  - component: {fileID: 3766379943083794162}
-  - component: {fileID: 5817010307174895835}
+  - component: {fileID: 8943617883644602195}
+  - component: {fileID: 297066628186098473}
+  - component: {fileID: 2135170446886092977}
+  - component: {fileID: 1885461436463421318}
   m_Layer: 0
   m_Name: Piedras_1
   m_TagString: Enemy
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 173289033964730664}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2660733858169267850
+--- !u!136 &8943617883644602195
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,11 +44,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: -1.7756181, y: -0.56976557, z: 0}
---- !u!136 &3847611557146967844
+  m_Center: {x: 0, y: 0.006754875, z: 1.82}
+--- !u!136 &297066628186098473
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,11 +58,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 1.775618, y: -0.56976557, z: 0}
---- !u!136 &3766379943083794162
+  m_Center: {x: 0, y: 0.006754875, z: -1.82}
+--- !u!136 &2135170446886092977
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,11 +72,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 0, y: -0.56976557, z: -1.775618}
---- !u!136 &5817010307174895835
+  m_Center: {x: 1.82, y: 0.006754875, z: 0}
+--- !u!136 &1885461436463421318
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,10 +86,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 0, y: -0.56976557, z: 1.775618}
+  m_Center: {x: -1.82, y: 0.006754875, z: 0}
 --- !u!1 &2099791644956944168
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 3545772196808875925}
   - component: {fileID: 8424111459609576950}
   - component: {fileID: 1732835316261172675}
-  - component: {fileID: 2144973013549785567}
+  - component: {fileID: 1962528571}
   m_Layer: 0
   m_Name: FireCristal
   m_TagString: Enemy
@@ -439,7 +439,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7630301869637468412}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.3, y: 1.8, z: -2.7731075}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -479,10 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aecfe364c5e0b284aa77edea0cc20793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeTag: Freeze
+  freezeTag: PlayerEffect
   animator: {fileID: 3545772196808875925}
-  iceEffectPrefab: {fileID: 1593489397608608, guid: cfcaf78d78d55f548ba097909b77c92f,
-    type: 3}
   renderers: []
   skinnedRenderers: []
   freezeMaterial: {fileID: 2100000, guid: d0fd8e33bd284f14694335bc5f266263, type: 2}
@@ -503,7 +501,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2144973013549785567
+--- !u!114 &1962528571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,17 +510,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7630301869637468412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7df6891498ac3f54da1532d023b0e4b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 69c03a4020ca90640bbd33dfdeda8cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 300
+  maxHealth: 300
+  currentHealth: 0
   freezeEffect: {fileID: 8424111459609576950}
-  cooldown: 10
+  cooldown: 3
   animator: {fileID: 0}
   playersInRange: []
-  iceEffect: {fileID: 1593489397608608, guid: cfcaf78d78d55f548ba097909b77c92f, type: 3}
-  delay: 1
-  iceDuration: 10
+  fireEffect: {fileID: 1593489397608608, guid: cfcaf78d78d55f548ba097909b77c92f, type: 3}
+  delay: 0
 --- !u!1 &9193798402320069957
 GameObject:
   m_ObjectHideFlags: 0

@@ -91,7 +91,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2209396417402781841}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -131,10 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aecfe364c5e0b284aa77edea0cc20793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeTag: Freeze
+  freezeTag: PlayerEffect
   animator: {fileID: 5077808909277863928}
-  iceEffectPrefab: {fileID: 1593489397608608, guid: cfcaf78d78d55f548ba097909b77c92f,
-    type: 3}
   renderers: []
   skinnedRenderers: []
   freezeMaterial: {fileID: 2100000, guid: d0fd8e33bd284f14694335bc5f266263, type: 2}
@@ -167,7 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df6891498ac3f54da1532d023b0e4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 300
+  maxHealth: 300
+  currentHealth: 0
   freezeEffect: {fileID: 262732663884760475}
   cooldown: 10
   animator: {fileID: 0}
@@ -473,10 +472,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4032418765275349453}
-  - component: {fileID: 6026324356020659943}
-  - component: {fileID: 4767177960799305545}
-  - component: {fileID: 4830607373507206815}
-  - component: {fileID: 2879824670190719158}
+  - component: {fileID: 6435401577010859685}
+  - component: {fileID: 9163041692270232188}
+  - component: {fileID: 6501074949288805286}
+  - component: {fileID: 1200373031799182540}
   m_Layer: 0
   m_Name: Piedras_1
   m_TagString: Enemy
@@ -498,7 +497,7 @@ Transform:
   m_Father: {fileID: 8442763033106577733}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &6026324356020659943
+--- !u!136 &6435401577010859685
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -508,11 +507,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: -1.7756181, y: -0.56976557, z: 0}
---- !u!136 &4767177960799305545
+  m_Center: {x: -1.8199999, y: 0.006754875, z: 0}
+--- !u!136 &9163041692270232188
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -522,11 +521,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 1.775618, y: -0.56976557, z: 0}
---- !u!136 &4830607373507206815
+  m_Center: {x: 1.82, y: 0.006754875, z: 0}
+--- !u!136 &6501074949288805286
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -536,11 +535,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 0, y: -0.56976557, z: -1.775618}
---- !u!136 &2879824670190719158
+  m_Center: {x: 0, y: 0.006754875, z: -1.82}
+--- !u!136 &1200373031799182540
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,7 +549,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 0, y: -0.56976557, z: 1.775618}
+  m_Center: {x: 0, y: 0.006754875, z: 1.82}

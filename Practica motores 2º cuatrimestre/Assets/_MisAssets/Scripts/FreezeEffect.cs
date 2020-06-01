@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FreezeEffect : MonoBehaviour
 {
-    public string freezeTag = "Freeze";
+    public string freezeTag = "PlayerEffect";
 
 
     public Animator animator;
 
-    public GameObject iceEffectPrefab;
+    //public GameObject iceEffectPrefab;
 
     public List<MeshRenderer> renderers = new List<MeshRenderer>();
     public List<SkinnedMeshRenderer> skinnedRenderers = new List<SkinnedMeshRenderer>();
@@ -18,32 +18,52 @@ public class FreezeEffect : MonoBehaviour
 
     public bool freezed = false;
 
+
+    private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
         renderers = new List<MeshRenderer>(GetComponentsInChildren<MeshRenderer>());
         skinnedRenderers = new List<SkinnedMeshRenderer>(GetComponentsInChildren<SkinnedMeshRenderer>());
+        if (GetComponent<Rigidbody>())
+        {
+            rb = GetComponent<Rigidbody>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag(freezeTag))
+        if (other.CompareTag(freezeTag))
         {
-            Freeze();
+            if (other.GetComponentInParent<Freezer>())
+            {
+                Freeze(other.GetComponentInParent<Freezer>().freezeTime);
+            }
+
         }
     }
 
 
-    void Freeze()
+    void Freeze(float freezeTime)
     {
+        if (freezed) return;
+
         freezed = true;
         animator.enabled = false;
+
+        if (rb)
+        {
+            rb.angularVelocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
+        }
+
         foreach (MeshRenderer renderer in renderers)
         {
             List<Material> materials = new List<Material>(renderer.materials);
@@ -57,17 +77,15 @@ public class FreezeEffect : MonoBehaviour
             skinnedRenderer.materials = materials.ToArray();
         }
 
-        //GameObject iceEffect=Instantiate(iceEffectPrefab, new Vector3(transform.position.x, 0.01f, transform.position.z), Quaternion.identity);
 
-        StartCoroutine(UnFreeze(6f, null));
+        StartCoroutine(UnFreeze(freezeTime));
+
     }
 
-    IEnumerator UnFreeze(float t, GameObject iceEffect)
+    IEnumerator UnFreeze(float t)
     {
         yield return new WaitForSeconds(t);
 
-        freezed = false;
-        animator.enabled = true;
         foreach (MeshRenderer renderer in renderers)
         {
             List<Material> materials = new List<Material>(renderer.materials);
@@ -83,7 +101,8 @@ public class FreezeEffect : MonoBehaviour
             skinnedRenderer.materials = materials.ToArray();
         }
 
-        //iceEffect.GetComponent<Animator>().SetTrigger("Disappear");
+        freezed = false;
+        animator.enabled = true;
 
     }
 

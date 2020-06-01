@@ -9,6 +9,9 @@ TagManager:
   - Freeze
   - FreezeEnemy
   - Booster
+  - FxTemporaire
+  - PlayerEffect
+  - EnemyEffect
   layers:
   - Default
   - TransparentFX
@@ -22,8 +25,8 @@ TagManager:
   - Effect
   - Targeteable
   - Shot
-  - 
-  - 
+  - Enemy
+  - EnemyShot
   - 
   - 
   - 

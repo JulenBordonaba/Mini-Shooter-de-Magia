@@ -2,35 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(FreezeEffect))]
-public class Enemy : MonoBehaviour
+
+public class Enemy : Entity
 {
-    public float maxhealth = 300;
+    
 
-
-    protected float currentHealth;
-
-    public FreezeEffect freezeEffect;
-
-
-    // Start is called before the first frame update
-    public virtual void Start()
-    {
-        freezeEffect = GetComponent<FreezeEffect>();
-        currentHealth = maxhealth;
-    }
-
-
-    public void TakeDamage(float damageAmmount)
-    {
-        currentHealth -= damageAmmount;
-        if(currentHealth<=0)
-        {
-            KillEnemy();
-        }
-    }
-
-    void KillEnemy()
+    public override void Kill()
     {
         gameObject.SetActive(false);
     }

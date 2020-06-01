@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
         Vector3 localDirectionForward = transform.TransformDirection(new Vector3(-direction.x, direction.y, direction.z)).normalized;
         Vector3 localDirectionStrafe = transform.TransformDirection(new Vector3(direction.x, direction.y, -direction.z)).normalized;
 
-        print(localDirectionForward);
+        //print(localDirectionForward);
         /*if(Mathf.Abs(transform.forward.x)>Mathf.Abs(transform.forward.z))
         {
             localDirection.x = -localDirection.x;

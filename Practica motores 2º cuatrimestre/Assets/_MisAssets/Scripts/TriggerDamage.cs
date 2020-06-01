@@ -14,7 +14,7 @@ public class TriggerDamage : MonoBehaviour
     {
         if (other.CompareTag(targetTag))
         {
-            other.GetComponentInParent<Enemy>()?.TakeDamage(damage);
+            other.GetComponentInParent<Entity>()?.TakeDamage(damage);
         }
     }
 

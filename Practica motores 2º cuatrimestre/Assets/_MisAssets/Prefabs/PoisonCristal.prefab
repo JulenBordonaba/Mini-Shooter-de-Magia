@@ -42,7 +42,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.2522135
+  m_Radius: 0.96229416
   m_Height: 7.1949825
   m_Direction: 1
   m_Center: {x: 0, y: -0.45030117, z: 0}
@@ -55,10 +55,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6065491268776058902}
-  - component: {fileID: 3493453822672455484}
-  - component: {fileID: 2446185453741235858}
-  - component: {fileID: 2365287541474443076}
-  - component: {fileID: 4912797083714842989}
+  - component: {fileID: 5452206142948834428}
+  - component: {fileID: 3620146896039685116}
+  - component: {fileID: 6592824936118681300}
+  - component: {fileID: 1860302583508271968}
   m_Layer: 0
   m_Name: Piedras_1
   m_TagString: Enemy
@@ -80,7 +80,7 @@ Transform:
   m_Father: {fileID: 1652904160148314270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &3493453822672455484
+--- !u!136 &5452206142948834428
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,11 +90,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: -1.7756181, y: -0.56976557, z: 0}
---- !u!136 &2446185453741235858
+  m_Center: {x: -1.8199999, y: 0.006754875, z: 0}
+--- !u!136 &3620146896039685116
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,11 +104,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 1.775618, y: -0.56976557, z: 0}
---- !u!136 &2365287541474443076
+  m_Center: {x: 1.82, y: 0.006754875, z: 0}
+--- !u!136 &6592824936118681300
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,11 +118,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 0, y: -0.56976557, z: -1.775618}
---- !u!136 &4912797083714842989
+  m_Center: {x: 0, y: 0.006754875, z: -1.82}
+--- !u!136 &1860302583508271968
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,10 +132,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.583776
-  m_Height: 4.268417
+  m_Radius: 0.6118181
+  m_Height: 6.84638
   m_Direction: 1
-  m_Center: {x: 0, y: -0.56976557, z: 1.775618}
+  m_Center: {x: 0, y: 0.006754875, z: 1.82}
 --- !u!1 &4003891287797943984
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 2711998069106818595}
   - component: {fileID: 6953446067660940352}
   - component: {fileID: 908507134275638389}
-  - component: {fileID: 672047283360546921}
+  - component: {fileID: 77075045393210994}
   m_Layer: 0
   m_Name: PoisonCristal
   m_TagString: Enemy
@@ -470,7 +470,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9039755765135073610}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.57, y: 1.8, z: -2.7731075}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -510,10 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aecfe364c5e0b284aa77edea0cc20793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeTag: Freeze
+  freezeTag: PlayerEffect
   animator: {fileID: 2711998069106818595}
-  iceEffectPrefab: {fileID: 1593489397608608, guid: cfcaf78d78d55f548ba097909b77c92f,
-    type: 3}
   renderers: []
   skinnedRenderers: []
   freezeMaterial: {fileID: 2100000, guid: d0fd8e33bd284f14694335bc5f266263, type: 2}
@@ -534,7 +532,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &672047283360546921
+--- !u!114 &77075045393210994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -543,14 +541,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 9039755765135073610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7df6891498ac3f54da1532d023b0e4b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 06d1c8034b9900d48b2b48fdc3eed79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 300
+  maxHealth: 300
+  currentHealth: 0
   freezeEffect: {fileID: 6953446067660940352}
-  cooldown: 10
+  cooldown: 5
   animator: {fileID: 0}
   playersInRange: []
-  iceEffect: {fileID: 1593489397608608, guid: cfcaf78d78d55f548ba097909b77c92f, type: 3}
-  delay: 1
-  iceDuration: 10
+  poisonEffect: {fileID: 6621832150980595987, guid: 4252ac440d5ccf143a54826c60af7d5e,
+    type: 3}
+  delay: 2
+  posionDuration: 15
