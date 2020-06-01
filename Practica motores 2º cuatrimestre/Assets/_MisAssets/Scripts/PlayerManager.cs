@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerManager : Entity
 {
     public static PlayerManager instance;
+
+    public Rigidbody rb;
     
 
     public bool boosted = false;
@@ -12,6 +14,7 @@ public class PlayerManager : Entity
     private void Awake()
     {
         instance = this;
+        rb = GetComponent<Rigidbody>();
     }
     
     private void OnTriggerEnter(Collider other)

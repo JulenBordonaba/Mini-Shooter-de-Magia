@@ -78,14 +78,12 @@ public class FreezeEffect : MonoBehaviour
         }
 
 
-        StartCoroutine(UnFreeze(freezeTime));
+        StartCoroutine(FreezeDuration(freezeTime));
 
     }
 
-    IEnumerator UnFreeze(float t)
+    public void UnFreeze()
     {
-        yield return new WaitForSeconds(t);
-
         foreach (MeshRenderer renderer in renderers)
         {
             List<Material> materials = new List<Material>(renderer.materials);
@@ -103,6 +101,13 @@ public class FreezeEffect : MonoBehaviour
 
         freezed = false;
         animator.enabled = true;
+    }
+
+    IEnumerator FreezeDuration(float t)
+    {
+        yield return new WaitForSeconds(t);
+
+        UnFreeze();
 
     }
 

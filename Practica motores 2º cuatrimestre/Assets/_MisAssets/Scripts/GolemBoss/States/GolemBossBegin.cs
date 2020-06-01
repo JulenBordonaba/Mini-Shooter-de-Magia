@@ -11,8 +11,13 @@ public class GolemBossBegin : GolemBossState
 
     public override IEnumerator Start()
     {
-        golemBossAI.animator.SetTrigger("Begin");
-        yield return new WaitForSeconds(1.5f);
+        yield return null;
         //golemBossAI.SetState()
+    }
+
+    public override void Update()
+    {
+        base.Update();
+        golemBossAI.rb.angularVelocity = Vector3.zero;
     }
 }

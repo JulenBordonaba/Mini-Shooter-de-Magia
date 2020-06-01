@@ -32,6 +32,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &512160013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721981301661068616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806d6d7cc423f5642bb14d667cf402cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poisonTag: EnemyEffect
+  entity: {fileID: 2415387437026253326}
+  renderers: []
+  skinnedRenderers: []
+  poisonMaterial: {fileID: 2100000, guid: 37856f6af060adc4581502b720d622d1, type: 2}
+  poisonTime: 0
+  poisoned: 0
+  poisonDamage: 0
+--- !u!114 &512160015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721981301661068616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4dce3ac81c2724c8db8c527542c759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useKey: 50
+  cooldown: 5
+  boostEffectPrefab: {fileID: 1546126278896170, guid: 01674b6c96a9bb24da0736925af10163,
+    type: 3}
 --- !u!1 &2415387438283950882
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +133,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16183
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -214,23 +250,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2101158939, guid: b341dd2ad3389d745909d714f85a3fbc, type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 2415387438283950892}
     - target: {fileID: 1886250042, guid: b341dd2ad3389d745909d714f85a3fbc, type: 3}
       propertyPath: freezeTag
       value: EnemyEffect
       objectReference: {fileID: 0}
     - target: {fileID: 1886250043, guid: b341dd2ad3389d745909d714f85a3fbc, type: 3}
+      propertyPath: cooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886250043, guid: b341dd2ad3389d745909d714f85a3fbc, type: 3}
       propertyPath: myCamera
       value: 
       objectReference: {fileID: 2415387438283950892}
+    - target: {fileID: 2101158939, guid: b341dd2ad3389d745909d714f85a3fbc, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 2415387438283950892}
+    - target: {fileID: 1309226518883012139, guid: b341dd2ad3389d745909d714f85a3fbc,
+        type: 3}
+      propertyPath: spells.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309226518883012139, guid: b341dd2ad3389d745909d714f85a3fbc,
+        type: 3}
+      propertyPath: spells.Array.data[1]
+      value: 
+      objectReference: {fileID: 512160015}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b341dd2ad3389d745909d714f85a3fbc, type: 3}
+--- !u!1 &1721981301661068616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3918301881102144368, guid: b341dd2ad3389d745909d714f85a3fbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2415387437825654328}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1721981301660643688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3918301881101782864, guid: b341dd2ad3389d745909d714f85a3fbc,
     type: 3}
   m_PrefabInstance: {fileID: 2415387437825654328}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2415387437026253326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1886250038, guid: b341dd2ad3389d745909d714f85a3fbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2415387437825654328}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721981301661068616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e537c53df8eaee46bcb1ec23e55a6cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

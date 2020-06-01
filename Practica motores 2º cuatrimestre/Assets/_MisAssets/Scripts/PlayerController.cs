@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         playerManager = GetComponent<PlayerManager>();
         rb = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
-        playerPlane = new Plane(transform.up, transform.position + transform.up);
+        playerPlane = new Plane(transform.up, transform.position );
         //agent.speed = velocity;
     }
 
@@ -83,6 +83,8 @@ public class PlayerController : MonoBehaviour
         //bool isTargeteable = false;
 
         Vector3 mouseWorldPosition = ScreenPointToWorldPointOnPlane(mouseScreenPosition, playerPlane, mainCamera);
+
+        mouseWorldPosition.y = 1;
 
         playerToMouse = mouseWorldPosition - transform.position;
 

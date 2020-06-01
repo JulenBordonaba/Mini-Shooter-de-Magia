@@ -81,7 +81,7 @@ MonoBehaviour:
   velocity: 30
   escenarioParticles: {fileID: 0}
   enemyParticles: {fileID: 0}
-  explosionPrefab: {fileID: 439154836612472049, guid: b191ad0154b71d94b8b52b4c840b2d13,
+  explosionPrefab: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
     type: 3}
   boosted: 0
   triggerDamage: {fileID: 2305616625127766094}

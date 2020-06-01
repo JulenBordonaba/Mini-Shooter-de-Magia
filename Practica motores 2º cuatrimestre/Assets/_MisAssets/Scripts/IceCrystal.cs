@@ -41,9 +41,10 @@ public class IceCrystal : EnemyCrystal
 
     IEnumerator SpawnEffect(Transform targetTransform)
     {
+        Vector3 targetPosition = targetTransform.position;
         yield return new WaitForSeconds(delay);
 
-        GameObject effect = Instantiate(iceEffect, new Vector3(targetTransform.position.x, 0.01f, targetTransform.position.z), Quaternion.identity);
+        GameObject effect = Instantiate(iceEffect, new Vector3(targetPosition.x, 0.01f, targetPosition.z), Quaternion.identity);
         StartCoroutine(DespawnEffect(effect));
 
     }
