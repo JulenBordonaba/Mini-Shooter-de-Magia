@@ -613,7 +613,7 @@ MonoBehaviour:
   cooldown: 3
   animator: {fileID: 0}
   playersInRange: []
-  fireEffect: {fileID: 5821421423848700751, guid: c10b8e57210c3134e943c46756efe306,
+  fireEffect: {fileID: 8892859481092918023, guid: a324bb18edecc714bbf759132767c700,
     type: 3}
   delay: 0
 --- !u!1 &9193798402320069957

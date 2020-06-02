@@ -9,36 +9,47 @@ public static class Global
 
     public static void SaveData<T>(this T _data, string path)
     {
-        Debug.Log("ADP: " + Application.persistentDataPath);
         string completePath = Path.Combine(Application.persistentDataPath, path);
-        Debug.Log(completePath);
-        string jsonData = JsonUtility.ToJson(_data);
+        string jsonData = JsonUtility.ToJson(_data, true);
 
-        if (!File.Exists(completePath))
-        {
-            File.Create(path);
-        }
 
-        File.WriteAllText(path, jsonData);
-
+        File.WriteAllText(completePath, jsonData);
     }
 
     public static T LoadData<T>(this string path)
     {
-
         string completePath = Path.Combine(Application.persistentDataPath, path);
-
-        string _jsonData = File.ReadAllText(completePath);
 
         if (!File.Exists(completePath))
         {
             return default(T);
         }
 
-        T _data = JsonUtility.FromJson<T>(_jsonData);
+        string jsonData = File.ReadAllText(completePath);
 
+        T data = JsonUtility.FromJson<T>(jsonData);
+
+        return data;
+
+    }
+
+    public static void SaveDataPlayerPrefs<T>(this T _data, string dataKey)
+    {
+        string jsonData = JsonUtility.ToJson(_data, true);
+
+        PlayerPrefs.SetString(dataKey, jsonData);
+
+    }
+
+    public static T LoadDataPlayerPrefs<T>(this string dataKey)
+    {
+        if (!PlayerPrefs.HasKey(dataKey)) return default(T);
+
+        string _jsonData = PlayerPrefs.GetString(dataKey);
+        T _data = JsonUtility.FromJson<T>(_jsonData);
         return _data;
 
     }
+
     #endregion
 }

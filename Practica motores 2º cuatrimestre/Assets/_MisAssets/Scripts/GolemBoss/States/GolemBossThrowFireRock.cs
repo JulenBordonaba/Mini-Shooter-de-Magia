@@ -27,7 +27,7 @@ public class GolemBossThrowFireRock : GolemBossState
     {
         base.Update();
         golemBossAI.agent.SetDestination(PlayerManager.instance.transform.position);
-
+        
 
         if (golemBossAI.golemBoss.freezeEffect.freezed)
         {

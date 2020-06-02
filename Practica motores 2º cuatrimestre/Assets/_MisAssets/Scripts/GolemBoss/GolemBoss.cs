@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GolemBoss : Enemy
 {
@@ -17,6 +18,9 @@ public class GolemBoss : Enemy
 
     public GameObject spinObject;
 
+    public Timer timer;
+    
+
 
     public float shotVelocity = 10;
 
@@ -26,6 +30,30 @@ public class GolemBoss : Enemy
     public float sprintSpeed = 10f;
 
     public float spintSpeed = 7f;
+
+    public override void Kill()
+    {
+        CheckTime();
+        SceneManager.LoadScene("MainMenu");
+        base.Kill();
+
+    }
+
+
+    public void CheckTime()
+    {
+        if (Timer.bestTime != null)
+        {
+            if (timer.currentTime < timer.TimeToFloat(Timer.bestTime))
+            {
+                Timer.bestTime = timer.FloatToTime(timer.currentTime);
+            }
+        }
+        else
+        {
+            Timer.bestTime = timer.FloatToTime(timer.currentTime);
+        }
+    }
 
 
     public void ShotFire()

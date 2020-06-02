@@ -51,9 +51,15 @@ public class Bullet : MonoBehaviour
         }
         if(boosted)
         {
-            Destroy(Instantiate(explosionPrefab, transform.position, transform.rotation),1f);
+            
         }
         Destroy(gameObject);
+    }
+
+    IEnumerator Explosion()
+    {
+        yield return new WaitForEndOfFrame();
+        Destroy(Instantiate(explosionPrefab, transform.position, transform.rotation), 1f);
     }
 
 }

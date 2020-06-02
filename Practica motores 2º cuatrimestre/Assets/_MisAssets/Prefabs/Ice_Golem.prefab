@@ -924,6 +924,7 @@ MonoBehaviour:
   maxHealth: 300
   currentHealth: 0
   freezeEffect: {fileID: 2263783280238303913}
+  drop: {fileID: 5288623552788240347, guid: 2071b4f6fa68544478f17d9ac1ef97d7, type: 3}
   shotCooldown: 2
   shotVelocity: 10
   stopDistance: 8

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthHUD : MonoBehaviour
 {
-    public PlayerManager player;
+    public Entity entity;
     public Image healthbar;
 
     private float startPosition;
@@ -29,7 +29,7 @@ public class HealthHUD : MonoBehaviour
 
     public float healthProportion
     {
-        get { return player.currentHealth / player.maxHealth; }
+        get { return entity.currentHealth / entity.maxHealth; }
     }
 
 }

@@ -10,7 +10,9 @@ public class EnemyCrystal : Enemy
     protected bool inCooldown = false;
 
     public List<PlayerController> playersInRange = new List<PlayerController>();
-    
+
+
+
 
     public override void Start()
     {
@@ -25,9 +27,9 @@ public class EnemyCrystal : Enemy
 
     public virtual void Spell()
     {
-        
+
     }
-    
+
     public IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(cooldown);
@@ -36,9 +38,9 @@ public class EnemyCrystal : Enemy
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponentInParent<PlayerController>())
+        if (other.GetComponentInParent<PlayerController>())
         {
-            playersInRange.Add( other.GetComponentInParent<PlayerController>());
+            playersInRange.Add(other.GetComponentInParent<PlayerController>());
         }
     }
 
@@ -47,7 +49,7 @@ public class EnemyCrystal : Enemy
         if (other.GetComponentInParent<PlayerController>())
         {
             PlayerController pc = other.GetComponentInParent<PlayerController>();
-            if(playersInRange.Contains(pc))
+            if (playersInRange.Contains(pc))
             {
                 playersInRange.Remove(pc);
             }

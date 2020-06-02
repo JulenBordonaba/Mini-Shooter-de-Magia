@@ -12,6 +12,8 @@ public class Entity : MonoBehaviour
 
     public FreezeEffect freezeEffect;
 
+    protected bool canTakeDamage = true;
+
 
     // Start is called before the first frame update
     public virtual void Start()
@@ -24,11 +26,22 @@ public class Entity : MonoBehaviour
 
     public void TakeDamage(float damageAmmount)
     {
+        if (!canTakeDamage) return;
+
+        StartCoroutine(DamageInmunityDuration());
+
         currentHealth -= damageAmmount;
+        currentHealth = Mathf.Min(currentHealth, maxHealth);
         if (currentHealth <= 0)
         {
             Kill();
         }
+    }
+
+    protected IEnumerator DamageInmunityDuration()
+    {
+        yield return new WaitForEndOfFrame();
+        canTakeDamage = true;
     }
 
     public virtual void Kill()

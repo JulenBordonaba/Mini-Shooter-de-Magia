@@ -9,7 +9,8 @@ public class Spell : MonoBehaviour
 
     protected bool inCooldown = false;
 
-    
+
+    public Animator animator;
 
     public virtual void Cast()
     {

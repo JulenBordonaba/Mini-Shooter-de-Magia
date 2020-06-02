@@ -41,6 +41,7 @@ public class IceSpell : Spell
     public override void Cast()
     {
         base.Cast();
+        if (inCooldown) return;
         casting = true;
         effectGuide.SetActive(true);
     }
@@ -49,6 +50,9 @@ public class IceSpell : Spell
     {
         base.Use();
 
+        inCooldown = true;
+        animator.SetTrigger("Cast");
+        StartCoroutine(Cooldown());
         casting = false;
         effectGuide.SetActive(false);
 

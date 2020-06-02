@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218724716591446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.467, y: 63.51175, z: 46.87473}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 11.467, y: 63.505, z: 46.562}
+  m_LocalScale: {x: 2.72901, y: 2.72901, z: 2.72901}
   m_Children:
   - {fileID: 4210678332855296}
   - {fileID: 4710399351570394}
@@ -46,10 +46,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 1.0572891
+  m_Radius: 0.050000004
+  m_Height: 0.9668744
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.17926025}
+  m_Center: {x: 0, y: 0, z: 0.13405287}
 --- !u!54 &54024267654260008
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f0e235fdb2df144925c293052619a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 50
   targetTag: Enemy
 --- !u!1 &1300770625939150
 GameObject:

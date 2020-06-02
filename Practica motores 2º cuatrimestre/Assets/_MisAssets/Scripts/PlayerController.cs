@@ -10,13 +10,13 @@ public class PlayerController : MonoBehaviour
     [Header("MOVEMENT")]
     public float velocity = 4f;
     public float stoppingDistance = 8f;
-    
+    public Animator playerAnimator;
+
 
     private Vector3 inputDirection;
     private Vector3 movement;
 
     private Rigidbody rb;
-    private Animator playerAnimator;
 
     private Plane playerPlane;
     private Vector3 playerToMouse;
@@ -31,7 +31,11 @@ public class PlayerController : MonoBehaviour
         //agent = GetComponent<NavMeshAgent>();
         playerManager = GetComponent<PlayerManager>();
         rb = GetComponent<Rigidbody>();
-        playerAnimator = GetComponent<Animator>();
+        if(playerAnimator==null)
+        {
+
+            playerAnimator = GetComponent<Animator>();
+        }
         playerPlane = new Plane(transform.up, transform.position );
         //agent.speed = velocity;
     }
@@ -128,7 +132,7 @@ public class PlayerController : MonoBehaviour
     {
         Ray ray = camera.ScreenPointToRay(screenPoint);
 
-        RaycastHit hit;
+        //RaycastHit hit;
 
         //if(Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Targeteable")))
         //{
