@@ -27,7 +27,7 @@ public class Entity : MonoBehaviour
     public void TakeDamage(float damageAmmount)
     {
         if (!canTakeDamage) return;
-
+        canTakeDamage = false;
         StartCoroutine(DamageInmunityDuration());
 
         currentHealth -= damageAmmount;

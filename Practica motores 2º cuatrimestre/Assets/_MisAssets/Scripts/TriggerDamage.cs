@@ -9,12 +9,22 @@ public class TriggerDamage : MonoBehaviour
 
     public string targetTag = "Enemy";
 
+    public List<Entity> hittedEntities = new List<Entity>();
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(targetTag))
         {
-            other.GetComponentInParent<Entity>()?.TakeDamage(damage);
+            if(other.GetComponentInParent<Entity>())
+            {
+                Entity e = other.GetComponentInParent<Entity>();
+                if(!hittedEntities.Contains(e))
+                {
+                    hittedEntities.Add(e);
+                    e.TakeDamage(damage);
+                }
+                
+            }
         }
     }
 

@@ -39,11 +39,11 @@ public class EnemyGolem : Enemy
         if (!active) return;
         agent.SetDestination(PlayerManager.instance.transform.position);
 
-        if (ObjectiveDistance < stopDistance+2 && !freezeEffect.freezed)
+        if (ObjectiveDistance < stopDistance+6 && !freezeEffect.freezed)
         {
             if (canShot)
             {
-                Shot();
+                animator.SetTrigger("Attack");
             }
         }
 
@@ -61,7 +61,7 @@ public class EnemyGolem : Enemy
         }
     }
 
-    public void Shot()
+    public void ShotRight()
     {
         canShot = false;
         GameObject projectile = Instantiate(projectilePrefab, projecttileSpawn.position, Quaternion.identity);

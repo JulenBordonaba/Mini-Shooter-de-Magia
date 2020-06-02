@@ -56,7 +56,7 @@ public class GolemBoss : Enemy
     }
 
 
-    public void ShotFire()
+    public void ShotLeft()
     {
         GameObject projectile = Instantiate(fireProjectilePrefab, fireProjectileSpawn.position, Quaternion.identity);
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
@@ -69,7 +69,7 @@ public class GolemBoss : Enemy
 
     }
 
-    public void ShotIce()
+    public void SHotRight()
     {
         GameObject projectile = Instantiate(iceProjectilePrefab, iceProjectileSpawn.position, Quaternion.identity);
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();

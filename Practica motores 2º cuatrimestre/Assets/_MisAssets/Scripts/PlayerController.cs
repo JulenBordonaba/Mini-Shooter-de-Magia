@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float velocity = 4f;
     public float stoppingDistance = 8f;
     public Animator playerAnimator;
+    public AudioSource stepsAudioSource;
 
 
     private Vector3 inputDirection;
@@ -114,7 +115,14 @@ public class PlayerController : MonoBehaviour
         {
             localDirection.x = -localDirection.x;
         }*/
-        
+        if(localDirectionForward.z !=0 || localDirectionStrafe.x!=0)
+        {
+            stepsAudioSource.volume = 0.25f;
+        }
+        else
+        {
+            stepsAudioSource.volume = 0f;
+        }
 
         playerAnimator.SetFloat("Forward", localDirectionForward.z);
         playerAnimator.SetFloat("Strafe", localDirectionStrafe.x);

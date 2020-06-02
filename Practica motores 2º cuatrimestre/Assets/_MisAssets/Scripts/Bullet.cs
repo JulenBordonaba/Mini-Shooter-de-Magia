@@ -51,8 +51,17 @@ public class Bullet : MonoBehaviour
         }
         if(boosted)
         {
-            
+            StartCoroutine(Explosion());
         }
+
+        StartCoroutine(DestroyObject());
+    }
+
+    IEnumerator DestroyObject()
+    {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+
         Destroy(gameObject);
     }
 

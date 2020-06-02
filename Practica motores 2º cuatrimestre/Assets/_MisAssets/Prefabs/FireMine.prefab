@@ -125,6 +125,17 @@ MonoBehaviour:
   onTriggerEnter:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7000250389944870043}
+        m_MethodName: Instantiate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2822514277159139350}
         m_MethodName: DestroyThisObject
         m_Mode: 1
@@ -171,6 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4861510389301760637}
   - component: {fileID: 2822514277159139350}
+  - component: {fileID: 7000250389944870043}
   m_Layer: 0
   m_Name: FireMine
   m_TagString: Untagged
@@ -205,3 +217,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1485d024327448049befa0332ac60391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7000250389944870043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892859481092918023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b73b386bd51756438b03e007983aeb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInstantiate: {fileID: 1892078723244562, guid: c9c9b374b27d3c940b7228aa634f3ee3,
+    type: 3}

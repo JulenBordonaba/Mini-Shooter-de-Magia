@@ -19,6 +19,15 @@ public class PlayerManager : Entity
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        if(freezeEffect.freezed)
+        {
+            boosted = false;
+        }
+    }
+
+
     public override void Kill()
     {
         base.Kill();
